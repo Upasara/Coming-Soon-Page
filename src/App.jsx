@@ -24,7 +24,7 @@ function App() {
       <br className='hidden md:block' /> Be a part of something special.
      </p>
      {/* newsletter */}
-     <div className='mt-10 flex flex-col items-center gap-2 '>
+     <div className='mt-10 md:mt-20 flex flex-col md:flex-row items-center gap-2 '>
       <input
        type='email'
        id='email'
