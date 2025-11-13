@@ -16,4 +16,46 @@
     --color-primary-white : #ffffff;
     --color-secondary-white : #F9F8F6;
     --color-primary-black : #1f2937;
+};
+
+@theme inline {
+    --animate-aurora: aurora 60s linear infinite;
+    @keyframes aurora {
+      from {
+        background-position:
+          50% 50%,
+          50% 50%;
+      }
+      to {
+        background-position:
+          350% 50%,
+          350% 50%;
+      }
+    }
+  }
+
+  @theme inline {
+    --animate-meteor-effect: meteor 5s linear infinite;
+    
+    @keyframes meteor {
+      0% {
+        transform: rotate(215deg) translateX(0);
+        opacity: 1;
+      }
+      70% {
+        opacity: 1;
+      }
+      100% {
+        transform: rotate(215deg) translateX(-500px);
+        opacity: 0;
+      }
+    }
+  }
+
+
+@theme inline {
+  --shadow-input:
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
 }
