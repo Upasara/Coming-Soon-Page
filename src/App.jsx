@@ -23,9 +23,9 @@ function App() {
     <div className='relative grid grid-cols-1 md:grid-cols-2 min-h-screen overflow-hidden'>
      <div className='text-secondary-white md:text-primary-black flex flex-col justify-center items-center overflow-y-auto p-5'>
       {/* heading */}
-      <Meteors number={10} className='absolute inset-0 ' />
+      <Meteors number={20} className='absolute inset-0  ' />
 
-      <h1 className='uppercase text-3xl md:text-5xl text-center font-playfair font-semibold text-shadow-sm'>
+      <h1 className='z-10 uppercase text-3xl md:text-5xl text-center font-playfair font-semibold text-shadow-sm'>
        something <br />{' '}
        <ContainerTextFlip
         words={['extraordinary', 'amazing', 'beautiful']}
