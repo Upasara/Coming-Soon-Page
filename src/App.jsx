@@ -20,7 +20,6 @@ function App() {
  const [email, setEmail] = useState('');
  const handleSubmit = (e) => {
   e.preventDefault();
-  console.log(email);
 
   const serviceId = 'service_vnavbdb';
   const templateId = 'template_sst042c';
@@ -66,16 +65,9 @@ function App() {
        <br className='hidden md:block' /> Be a part of something special.
       </p>
       {/* newsletter */}
-      <div className='mt-10 md:mt-20 flex flex-col md:flex-row items-center gap-3 '>
-       <form onSubmit={handleSubmit}>
-        <Input
-         type='email'
-         value={email}
-         placeholder='Enter your email here'
-         onChange={(e) => setEmail(e.target.value)}
-         className='hidden md:block  h-8 w-80 font-montserrat text-primary-black placeholder:text-primary-black/40 focus:shadow-md focus-visible:ring-1
-         focus-visible:ring-primary-black ring ring-primary-black/30'
-        />
+      <div >
+       <form onSubmit={handleSubmit} className='mt-10 md:mt-20 flex flex-col md:flex-row items-center gap-3 '> 
+        
         <input
          type='email'
          value={email}
@@ -84,6 +76,14 @@ function App() {
         md:border-2 border-secondary-white/40 backdrop-blur-[1px] focus:backdrop-blur-sm md:border-primary-black/40 shadow-sm
        placeholder:text-secondary-white/50 md:placeholder:text-primary-black/30 focus:outline-none focus:border-primary-black focus:shadow-md duration-300 '
          placeholder='Enter your email here '
+        />
+        <Input
+         type='email'
+         value={email}
+         placeholder='Enter your email here'
+         onChange={(e) => setEmail(e.target.value)}
+         className='hidden md:block  h-8 w-80 font-montserrat bg-secondary-white text-primary-black placeholder:text-primary-black/40 focus:shadow-md focus-visible:ring-1
+         focus-visible:ring-primary-black ring ring-primary-black/30'
         />
 
         <Button
@@ -100,7 +100,7 @@ function App() {
        </form>
       </div>
       {/* socials */}
-      <div className='flex items-center gap-2 mt-10 text-xl md:text-2xl'>
+      <div className='flex justify-center items-center gap-2 mt-10 text-xl md:text-2xl'>
        <LinkPreview url='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/450px-Facebook_icon_2013.svg.png?20161223201621'>
         <FaFacebook />
        </LinkPreview>
